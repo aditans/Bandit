@@ -1,30 +1,29 @@
 # LVL 18 --> 19
 ## APPROACH
-1. upon entering the passw 
-2. found bandit20-do file, but we can read it because of its permissions. 
-3. but it has 's' in owner's id (setuid).
+1. Upon entering the password, the server keeps loging out.
 
-4. it always sets the user to owner, while executing that command.
+2. This is because of a hidden file .bashrc in our home directory.
 
-5. But after using ls-al we see that this file Can only be executed by bandit 19 but we are bandit 19 right?
-
-6. So, that means upon execution it sets our user from bandit 19(user) to bandet 20 (owner).
-
-7. We can med recheck this by typing  "whoami" & "./bandi20-do whoami "
+3. someone modified .bashrc file.
 
 
 
 ## CONCEPTS
  
-### ./
-used for execution of a file
+### ssh (command)
+ if a command is specified,it will be executed on the remote host instead of a login shell. 
 
-   
+### bash
+its a shell for kernel distribution linux. It interprets the commands and gives them to the os to process. Whenever a shell is launched it loads a startup script thats defined in .bashrc or .bash_profile
+              
+              
+    
 
  ## STEPS
 
-1. ./bandit20-do cat /etc/bandit-pass/bandit20
+1. ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
       
  ## LINKS:
 
-https://www.youtube.com/watch?v=Z-LXtVHowqo&list=PLG44s1Oo_jbTzrJ4kI24LwAyjFtTSDNlq&index=21&pp=iAQB
+https://www.youtube.com/watch?v=xhZ9lp2uAL8&list=PLG44s1Oo_jbTzrJ4kI24LwAyjFtTSDNlq&index=20&pp=iAQB
