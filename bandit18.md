@@ -1,6 +1,6 @@
-# LVL 19 --> 20
+# LVL 18 --> 19
 ## APPROACH
-1. search for file in band20 
+1. upon entering the passw 
 2. found bandit20-do file, but we can read it because of its permissions. 
 3. but it has 's' in owner's id (setuid).
 
